@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea backend</title>
+    <link rel="stylesheet" href="Tarea_backend.css">
+</head>
+<body>
+    <h1 class="subtitulo">Ejemplos de palabras reservadas en JAVA</h2>
+    <section class="container flex tex-left">
+        <div class="columna">
+            <h2>Char</h2>
+            <p>Se utiliza para almacenar caracteres individuales.
+                Utiliza 16 bits y se usa la codificación UTF-16 de Unicode.</p>
+            <p>Ejemplo:</p>
+            <p>Al usar esta palabra en Java se declara como sigue</p>
+            <code>public class EjemploChar</code><br>
+            <code> {</code><br>
+            <code> &nbsp;public static void main(String[] args){</code><br>
+            <code> &nbsp; &nbsp;char a = 'a';</code><br>
+            <code> &nbsp; &nbsp;//Para imprimir este valor usamos la siguiente linea</code><br>
+            <code> &nbsp; &nbsp;System.out.println("Valor de la variable char: " + ch);</code><br>
+            <code> &nbsp;}</code><br>
+            <code>}</code><br>
+            <code> &nbsp;//El resultado mostrado en la consola es: Valor de la variable char: a</code>
+        </div>
+
+        <div class="columna">
+            <h2>Boolean</h2>
+            <p> Tiene la finalidad de facilitar el trabajo con valores "verdadero/falso",
+                resultantes por regla general de evaluar expresiones. Los dos valores
+                posibles de este tipo son <em>true</em> y <em>false</em></p>
+            <p>Ejemplo:</p>
+            <p>Al usar esta palabra en Java se declara como sigue</p>
+            <code>public class EjemploBoolean</code><br>
+            <code> {</code><br>
+            <code> &nbsp;public static void main(String[] args){</code><br>
+            <code> &nbsp; &nbsp; &nbsp;boolean x;</code><br>
+            <code> &nbsp; &nbsp; &nbsp;x = false;</code><br>
+            <code> &nbsp; &nbsp; &nbsp;System.out.println("La variable x: " + x);</code><br>
+            <code> &nbsp; &nbsp;}</code><br>
+            <code> }</code><br>
+            <code>//El resultado en consola será: La variable x es false</code>
+        </div>
+
+        <div class="columna">
+            <h2>While</h2>
+            <p>Un bucle while permite repetir la ejecución de un grupo de
+                instrucciones mientras se cumpla una condición.</p>
+            <p>Ejemplo:</p>
+            <p>Al usar esta palabra en Java se declara como sigue</p>
+            <code>public class EjemploWhile</code><br>
+            <code>{</code><br>
+            <code>  &nbsp;public static void main(String[] args){</code><br>
+            <code>  &nbsp; &nbsp;int i=0;</code><br>
+            <code>  &nbsp; &nbsp;while(i<8) </code><br>
+            <code>  &nbsp; &nbsp;{</code><br>
+            <code>  &nbsp; &nbsp; &nbsp; System.out.print(i);</code><br>
+            <code>  &nbsp; &nbsp; &nbsp; i++;</code><br>
+            <code>  &nbsp; &nbsp;}</code><br>
+            <code>}</code><br>
+            <code>}</code><br>
+            <code>//El resultado en consola será: 0 1 2 3 4 5 6 7</code>
+        </div>
+
+        <div class="columna">
+            <h2>Float</h2>
+            <p>Tipo de dato que representa la cantidad de 4 bytes, 
+                son utilizados para representar números decimales, también
+                como números enteros con orden de magnitud más grande.</p>
+            <p>Ejemplo:</p>
+            <p>Al usar esta palabra en Java se declara como sigue</p>
+            <code>public class EjemploFloat</code><br>
+            <code> {</code><br>
+            <code> &nbsp;public static void main(String[] args){</code><br>
+            <code> &nbsp; &nbsp; &nbsp;float base, altura;</code><br>
+            <code> &nbsp; &nbsp; &nbsp;base = 2.25;</code><br>
+            <code> &nbsp; &nbsp; &nbsp;altura = 3;</code><br>
+            <code> &nbsp; &nbsp; &nbsp;area = base * altura;</code><br>
+            <code> &nbsp; &nbsp; &nbsp;System.out.println("El area es: " + area);</code><br>
+            <code> &nbsp; &nbsp;}</code><br>
+            <code> }</code><br>
+            <code>//El resultado en consola será: El area es: 6.75</code>
+        </div>
+
+        <div class="columna">
+            <h2>If</h2>
+            <p>En esta estructura se evalua una condición y en caso de que se cumpla
+                se ejecuta el contenido entre las llaves {} o en caso de que se omitan se
+                ejecuta el código hasta el primer «;» por lo tanto si no se usan los {}
+                la condición aplica solo a la siguiente instrucción al if.</p>
+            <p>Ejemplo:</p>
+            <p>Al usar esta palabra en Java se declara como sigue</p>
+            <code>public class EjemploIf</code><br>
+            <code> {</code><br>
+            <code> &nbsp;public static void main(String[] args){</code><br>
+            <code> &nbsp; &nbsp;int calificación = 9;</code><br>
+            <code> &nbsp; &nbsp;if(calificación > 6){</code><br>
+            <code> &nbsp; &nbsp; &nbsp;System.out.println("Promedio: " + calificación);</code><br>
+            <code> &nbsp; &nbsp;}</code><br>
+            <code> &nbsp;}</code><br>
+            <code> }</code><br>
+            <code> //El resultado en consola será: Promedio: 9;</code>
+        </div>
+    </section>
+
+    <br>
+    <h1 class="subtitulo">¿Cómo compilar un archivo .java desde la terminal?</h2>
+    <section>
+        <p class="text-left terminal">Para poder compilar un archivo .java se siguen los siguientes pasos:<br>
+            Tomaremos como ejemplo el siguiente Script:<br>
+            <img src="Ejemplo.png"><br>
+            1) Abrir la terminal del compilador usado, o bien el símbolo
+            del sistema (mcd).<br>
+            2) Con el comando <em>cd</em> nos situamos en la dirección en donde
+            se encuentra el archivo a compilar.<br> 
+            <img src="Cd.png"><br>
+            3) Compilar el programa Java con el comando <em>javac</em> 
+            seguido del nombre del archivo con la terminación <em>.java</em><br>
+            <img src="Javac.png"><br>
+            4) Se creará un nuevo archivo con el mismo nombre que el archivo 
+            java pero con extensión <em>.class</em><br>
+            <img src="class.png"><br>
+            5) Usar el comando <em>java</em> para ejecutar el archivo<br>
+            <img src="java.png"><br>
+            </p>
+    </section>
+
+    <br>
+    <h1 class="subtitulo">¿Cómo capturar datos introducidos desde el teclado en java?</h1>
+    <section>
+       <p>Para capturar datos ingresados por teclado se hace uso de la clase <em>Scanner.</em>
+        A continuación se presenta un ejemplo del código y como se hace uso de esta clase:<br>
+        <img src="Lectura.png"><br>
+        El resultado en la terminal es el siguiente:<br>
+        <img src="Resultado.png"><br><br>
+        Elaborado por: Cecilia Vianey Muñoz Chávez</p> 
+    </section>
+</body>
+</html>

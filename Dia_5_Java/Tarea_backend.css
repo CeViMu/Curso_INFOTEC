@@ -1,0 +1,34 @@
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.container{
+    margin: 0 auto; /*esto centra el contenido*/
+    width: 90%;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tex-center{
+    text-align:left;
+}
+
+.columna{
+    background-color:aliceblue;
+    color:black;
+    border: 1px solid #333;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 5px gray; /*sombra lado derecho y abajo y los 5px son degradado*/
+    width: 48%; /*cada columna ocupa el 23% del espacio*/
+    box-sizing: border-box;/*el padding y border se calculan de forma automatica*/
+}
+
+.subtitulo{
+    text-align: center;
+    color: royalblue;
+}
