@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="registrar datos.php" method="post">
+        Apellido y nombre:
+        <input type="text" name="nombre" size="30"><br>
+        ¿Es mayor de edad?:<br>
+        <input type="radio" name="radio1" checked value="si">Si<br>
+        <input type="radio" name="radio2" value="no">No<br>
+
+        Teléfono:
+        <input type="text" name="telefono" value="+52"><br>
+
+        <textarea name="comentarios" rows="5" cols="40">
+            Ingrese aquí sus comentarios
+        </textarea><br>
+        <input type="submit" checked value="Enviar"><br>
+
+    </form>
+</body>
+</html>
