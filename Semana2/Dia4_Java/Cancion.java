@@ -17,35 +17,39 @@ public class Cancion {
         return name;
     }
 
+    public void setName(String name){
+        this.name = name;
+    }
+
     public String getAutor(){
         return autor;
+    }
+
+    public void setAutor(String autor){
+        this.autor = autor;
     }
 
     public String getInterprete(){
         return interprete;
     }
 
+    public void setInterprete(String interprete){
+        this.interprete = interprete;
+    }
+
     public double getDuración(){
         return duracion;
+    }
+
+    public void setDuración(double duracion){
+        this.duracion = duracion;
     }
 
     public int getAño(){
         return año;
     }
-}
 
-class datosAdicionales{
-    static String disquera;
-    static String album;
-    static String género;
-
-    public static String Informacion(String album, String disquera){
-        return album + "-" + disquera;
+    public void setAño(int año){
+        this.año = año;
     }
-    
-    public static void main(String[] args) {
-        Cancion can1 = new Cancion("Clichés", "Jessy & Joy", "Jessy & Joy", 3.18, 2020);
-        
-    }
-
 }
