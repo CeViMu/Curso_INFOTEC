@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1</title>
+</head>
+<body>
+    <script>
+        let numero1, numero2, numero3;
+        numero1 = parseInt(prompt('Ingrese el primer número: '));
+        numero2 = parseInt(prompt('Ingrese el segundo número: '));
+        numero3 = parseInt(prompt('Ingrese el tercer número: '));
+
+        if(numero1 > numero2 && numero1 > numero3){
+            document.write('El número más grande es: ' + numero1);
+        }else{
+            if(numero2 > numero3){
+                document.write('El número más grande es: ' + numero2);
+            }else{
+                document.write('El número más grande es: ' + numero3);
+            }
+        }
+    </script>
+
+</body>
+</html>
