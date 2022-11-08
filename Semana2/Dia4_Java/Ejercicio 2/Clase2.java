@@ -21,4 +21,5 @@ public class Clase2 {
         obje1.getDuración(null);
         obje1.getAño(null);
     }
+
 }
