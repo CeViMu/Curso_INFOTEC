@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista ordenada</title>
+</head>
+<body>
+    <div id="lista"></div>
+    <script>
+        function iniciando(){
+            generarLista('lista', 'uno', 'dos', 'tres','cuatro', 'cinco', 'seis');
+        }
+        function generarLista(){
+            let lis = '<ol>'; //generando una lista
+            for(let i=1; i<arguments.length; i++){
+                lis = lis + '<li>' + arguments[i] + '</li>';
+            }
+            lis = lis + '</ol>';
+            let elemento = document.getElementById(arguments[0]);
+            elemento.innerHTML = lis;
+        }
+        iniciando();
+    </script>
+</body>
+</html>
