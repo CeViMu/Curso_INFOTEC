@@ -8,9 +8,10 @@ public class Producto {
     
     public Producto(String nombre, float precio, Integer cantidad, Integer tipo) {
         this.nombre = nombre;
-        this.precio = precio;
-        this.cantidad = cantidad;
-        this.tipo = tipo;
+        this.precio = (int)(Math.random()*201+300);
+        this.cantidad = (int)(Math.random()*6+10);
+        this.tipo = (int)(Math.random()*21+1);
     }
+    
     
 }
