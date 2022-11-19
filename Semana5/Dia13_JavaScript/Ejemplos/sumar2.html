@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function suma(){ //en esta funcion no hay un numero máximo de numeros, esta se va a adaptar
+            let s = 0;
+            for(let f=0; f<arguments.length; f++){
+                s= s + arguments[f];
+            }
+            return s;
+        }
+        document.write(suma(2,4));
+        document.write('<br>');
+        document.write(suma(1,2,3,4,5));
+        document.write('<br>');
+        document.write(suma(100,200,3000));
+    </script>
+</body>
+</html>
