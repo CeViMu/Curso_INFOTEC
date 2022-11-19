@@ -1,17 +1,19 @@
 package Semana4.Dia7y8_Java.ArchivosJson;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import com.google.gson.Gson;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONArray;
 
 public class Main {
+
     public static void main(String[] args) throws IOException{
-        Gson gson = new Gson();
-        Path path = Path.of("C:/Users/micho/OneDrive/Escritorio/INFOTEC/Semana4/Dia7y8_Java/ArchivosJson/ArchivoJSON.json");
-        String lectura = Files.readString(path);
-        System.out.println(lectura); /*imprimiendo en consola el contenido del json */
-        ArchivoJSON archiv = gson.fromJson(lectura, ArchivoJSON.class); /*retorno de un objeto de tipo archivo */
-        System.out.println(archiv.getNombre());
+        JSONParser parser = new JSONParser();
+        FileReader reader = new FileReader("C:/Users/micho/OneDrive/Escritorio/INFOTEC/Semana4/Dia7y8_Java/ArchivosJson/ArchivoJSON.json");
+        Object obj = parser.parse(reader);
+        JSONObject pJsonObj = (JSONObject)obj;
+        JSONArray arra = (JSONArray) pJsonObj.get()
     }
 }
