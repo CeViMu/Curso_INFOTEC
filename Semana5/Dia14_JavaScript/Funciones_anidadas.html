@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo funciones anidadas</title>
+</head>
+<body>
+    <script>
+        function funcion1(param1){
+            let variable = 7;
+            function funcion2(param2){
+                document.write("Parámetro 1: " + param2);
+                document.write('<br>');
+                document.write("Parámetro 2: " + param1);
+                document.write('<br>');
+                document.write("Variable local: " + variable);
+            }
+            funcion2(4);
+        }
+        funcion1(33);
+    </script>
+</body>
+</html>
