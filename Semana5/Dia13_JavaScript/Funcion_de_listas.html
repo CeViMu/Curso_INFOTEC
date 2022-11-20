@@ -18,8 +18,8 @@
                 lis = lis + '<li>' + arguments[i] + '</li>';
             }
             lis = lis + '</ol>';
-            let elemento = document.getElementById(arguments[0]);
-            elemento.innerHTML = lis;
+            let elemento = document.getElementById(arguments[0]);//aqui se obtiene la referencia del div que llega como parámetro
+            elemento.innerHTML = lis; //todo el codigo html debe cargarse en el div
         }
         iniciando();
     </script>
