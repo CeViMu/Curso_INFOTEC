@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables locales y globales</title>
+</head>
+<body>
+    <script>
+        'use strict'; //modo estricto
+        
+        function imprimir(){
+            let x = 10; //variable local
+            document.write(x);
+        }
+        imprimir();
+        document.write('<br>');
+
+        function imprimir2(){
+            document.write(global1 + '<br>'); 
+            global1++;
+        }
+        let global1 = 100;
+        imprimir2();
+        document.write(global1);
+    </script>
+</body>
+</html>
