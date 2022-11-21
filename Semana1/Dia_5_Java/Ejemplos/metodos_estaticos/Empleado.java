@@ -7,10 +7,14 @@ public class Empleado {
     private static double salarioBase=1000;
 
     public double getSalarioBase(){
-        return this.salarioBase;
+        return salarioBase;
     }
 
-    public static void setSalarioBase(double salarioBase){
+    public static void setSalarioBase(double salario){
         salarioBase = salario;
+    }
+
+    public static String muestraMensaje(){
+        return "Soy un método estático";
     }
 }
