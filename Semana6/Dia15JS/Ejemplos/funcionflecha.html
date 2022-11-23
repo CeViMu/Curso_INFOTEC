@@ -24,7 +24,14 @@
                 return y;
             }
         }
-        document.write('\n' + mayor1(10,2));
+        document.write('<br>' + mayor1(10,2));
+
+        const doble = x => x*2;
+        document.write('<br>' + doble(2));
+        document.write('<br>' + doble(33));
+
+        const mayor2 = (x,y) => (x>y) ?x:y;
+        document.write('<br>' + mayor2(8,3));
     </script>
 </body>
 </html>
