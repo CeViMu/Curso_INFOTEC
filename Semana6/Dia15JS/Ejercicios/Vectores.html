@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios funciones flecha</title>
+</head>
+<body>
+    <script>
+        document.write("Ejercicio 1 <br>");
+        const enteros = [7,77,1,45,8,43,12];
+        enteros.sort((x,y) => {
+            if(x>y){
+                return 1;
+            }else{
+                return -1;
+            }
+        })
+        document.write(enteros.toString());
+
+        document.write("<br><br> Ejercicio 2" + '<br>');
+        const vector = [7,17,27,37,47,57,67,77];
+        const menores30 = vector.filter(elemento => elemento<30);
+        document.write("Vector completo: " + vector.toString());
+        document.write("<br> Numeros menores a 30: " + menores30.toString());
+
+        document.write("<br><br> Ejercicio 3" + '<br>');
+        const aleatorio = x => {
+            return Math.random()*(x-1)+(1);
+        }
+        document.write("Número aleatorio: " + aleatorio(9));
+
+    </script>
+</body>
+</html>
