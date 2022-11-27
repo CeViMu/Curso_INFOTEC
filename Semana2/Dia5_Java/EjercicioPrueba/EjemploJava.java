@@ -4,8 +4,9 @@ public class EjemploJava {
     public static void main(String[] args) {
         Producto servilleta = new Producto("Servilleta", 140.00);
         Cliente cliente1 = new Cliente("Juan", 10.00);
-        Tienda tienda = new Tienda("Sonora", "Calle Robles #22", cliente1, servilleta)
+        Tienda tienda = new Tienda("Sonora", "Calle Robles #22", cliente1, servilleta);
         
-        
+        System.out.println("Nombre del cliente: " + tienda.getCliente().getNombre());
+        System.out.println("Nombre del producto: " + tienda.getProducto().getNombre());
     }
 }
