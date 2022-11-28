@@ -1,6 +1,6 @@
 package Semana2.Dia5_Java.TestJCF;
 
-public class Persona {
+public abstract class Persona {
     public Persona(String nombre, String apellido){ //por defecto
         this.nombre = nombre;
         this.apellido = apellido;
@@ -10,7 +10,7 @@ public class Persona {
     private String apellido;
 
     public String getNombreCompleto(){
-        return nombre+" "+apellido;
+        return nombre==null?"Sin Dato":nombre+" "+(apellido==null?"":apellido);
     }
 
     public String getNombre() {
@@ -28,4 +28,6 @@ public class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public abstract void pruebaAbstract();
 }
