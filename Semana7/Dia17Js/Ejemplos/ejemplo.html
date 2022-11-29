@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteo</title>
+</head>
+<body>
+    <script>
+        let entrada = parseInt(prompt('Ingresa un valor entre 1 y 10: '));
+        num = parseInt(Math.random()*10)+1;
+        if(num == entrada){
+            document.write("¡Ganaste!")
+        }else{
+            document.write("Lo sentimos, el numero ganador fue "+ num);
+        }
+    </script>
+</body>
+</html>
