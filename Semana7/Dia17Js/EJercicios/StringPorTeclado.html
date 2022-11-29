@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String por teclado</title>
+</head>
+<body>
+    <script>
+        let cadena = prompt("Ingresa una frase o palabra");
+        document.write("El texto ingresado es: " + cadena + "<br>");
+        document.write("El número de caracteres del texto es: " + cadena.length + "<br>");
+        document.write("El primer caracter del texto es: " + cadena.charAt(0) + "<br>");
+        document.write("Los dos últimos caracteres del texto son: " + cadena.substring(cadena.length-2, cadena.length) + "<br>");
+        
+        if(cadena.indexOf("Hola")!=-1){
+            document.write("El texto contiene la palabra Hola" + "<br>");
+        }else{
+            document.write("El texto no contiene la palabra Hola" + "<br>");
+        }
+
+        document.write("El texto en mayusculas es el siguiente: " + "<br>" + cadena.toLocaleUpperCase() + "<br>");
+        document.write("El texto en minusculas es el siguiente: " + "<br>" + cadena.toLowerCase())
+    </script>
+</body>
+</html>
