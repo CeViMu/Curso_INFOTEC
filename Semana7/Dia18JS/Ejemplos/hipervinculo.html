@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Hipervinculo(direccion, titulo){
+            this.direccion = direccion;
+            this.titulo = titulo,
+            this.retornarHipervinculo = function(){
+                let cadena;
+                cadena = '<a href = ' + this.direccion + '>' + this.titulo + '</a>';
+                return cadena;
+            }
+        }
+
+        let vector = new Array(3);
+        vector[0] = new Hipervinculo('https://www.google.com','google');
+        vector[1] = new Hipervinculo('https://www.msn.com', 'msn');
+        vector[2] = new Hipervinculo('https://www.yahoo.com', 'yahoo')
+        for( let f=0; f<vector.length; f++){
+            document.write(vector[f].retornarHipervinculo());
+            document.write('<br>');
+        }
+    </script>
+</body>
+</html>
