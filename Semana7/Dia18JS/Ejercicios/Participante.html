@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let participante = {
+            nombre: function(){
+                this.nombre = prompt('Ingrese su nombre: ');
+            },
+            puntos: function(){
+                this.puntos = parseInt(prompt('Ingrese la cantidad de puntos: '));
+            },
+            imprimir: function(){
+                document.write("El jugador " + this.nombre + " tiene " + this.puntos + " puntos <br>");
+            },
+            aumentarPuntos: function(aumento){
+                aumento = parseInt(prompt("Ingrese el aumento: "));
+                this.puntos = this.puntos + aumento; 
+            },
+            verificarSiGano: function(){
+                if(puntos > 1000){
+                    document.write("¡Felicidades, ganaste!")
+                }
+            }
+        };
+
+        participante.nombre();
+        participante.puntos();
+        participante.imprimir();
+        participante.aumentarPuntos();
+        document.write("Puntos totales <br>");
+        participante.imprimir();
+        participante.verificarSiGano();
+    </script>
+</body>
+</html>
