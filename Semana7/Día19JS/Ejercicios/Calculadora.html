@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+        class Calculadora{
+            constructor(x,y){
+                this.x = x;
+                this.y = y;
+                this.resultado = null;
+            }
+
+            imprimir(){
+                document.write(this.resultado + "<br>");
+            }
+            
+            sumar(){
+                this.resultado = this.x + this.y;
+                document.write(`La suma de ${this.x} y ${this.y} es: `);
+                this.imprimir();
+            }
+
+            restar(){
+                this.resultado = this.x - this.y;
+                document.write(`La resta de ${this.x} y ${this.y} es: `);
+                this.imprimir();
+            }
+            multiplicar(){
+                this.resultado = this.x * this.y;
+                document.write(`La multiplicación de ${this.x} y ${this.y} es: `);
+                this.imprimir();
+            }
+
+            dividir(){
+                this.resultado = this.x / this.y;
+                document.write(`El cociente de ${this.x} y ${this.y} es: `);
+                this.imprimir();
+            }
+
+            }
+
+        class CalculadoraCientifica extends Calculadora {
+            cuadrado(){
+                this.resultado = this.x + this.x;
+                document.write(`${this.x} al cuadrado es: `);
+                this.imprimir();
+            }
+
+            raizCuadrada(){
+                this.resultado = Math.sqrt(this.x);
+                document.write(`La raiz cuadrada de ${this.x} es: `);
+                this.imprimir();
+            }
+        }
+
+        const calculo1 = new Calculadora(7,17);
+        calculo1.sumar();
+        calculo1.restar();
+        calculo1.multiplicar();
+        calculo1.dividir();
+        document.write("<br>");
+        const calculo2 = new CalculadoraCientifica(7,18);
+        calculo2.sumar();
+        calculo2.restar();
+        calculo2.multiplicar();
+        calculo2.dividir();
+        calculo2.cuadrado();
+        calculo2.raizCuadrada();
+ 
+    </script>
+</body>
+</html>

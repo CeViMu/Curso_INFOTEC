@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matemática</title>
+</head>
+<body>
+    <script>
+        class Matematica{
+            static mayor(x,y){
+                if(x>y){
+                    return x;
+                }else{
+                    return y;
+                }
+            }
+
+            static menor(x,y){
+                if(x>y){
+                    return y;
+                }else{
+                    return x;
+                }
+            }
+
+            static aleatorio(x,y){
+                return Math.trunc((Math.random()*(y+1-x))+x);
+            }
+        }
+
+        let calculo1 = Matematica.aleatorio(2,7);
+        let calculo2 = Matematica.aleatorio(2,7);
+        document.write(`Los números generados son: ${calculo1} y ${calculo2} <br>`);
+        document.write(`El mayor entre ${calculo1} y ${calculo2} es: ${Matematica.mayor(calculo1,calculo2)} <br>`);
+        document.write(`El menor entre ${calculo1} y ${calculo2} es: ${Matematica.menor(calculo1,calculo2)} <br>`);
+    </script>
+</body>
+</html>
