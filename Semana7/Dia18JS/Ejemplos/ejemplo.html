@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Persona(nombre, edad){
+            this.nombre = nombre;
+            this.edad = edad;
+            this.imprimirNombre = function (){
+                document.write(this.nombre + ' que tiene una edad de '+ this.edad +'<br>');
+            }
+        }
+        let vector = new Array(4);
+        vector[0] = new Persona('Cecilia',23);
+        vector[1] = new Persona('Alfredo', 22);
+        vector[2] = new Persona('Gloria', 54);
+        vector[3] = new Persona('Salvador', 54)
+
+        let posMayor = 0;
+        for(let i = 1; i<vector.length; i++){
+            if(vector[i].edad>vector[posMayor].edad){
+                posMayor = i;
+            }
+        }
+        document.write('Persona con mayor edad: <br>');
+
+        for(let i = 1; i<vector.length; i++){
+            if(vector[i].edad == vector[posMayor].edad){
+                vector[i].imprimirNombre();
+            }
+        }
+    </script>
+</body>
+</html>
