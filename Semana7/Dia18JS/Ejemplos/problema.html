@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de clases</title>
+</head>
+<body>
+    <script>
+        class Cliente{
+            constructor(nombre, saldo){
+                this.nombre = nombre;
+                this.saldo = saldo;
+            }
+            depositar(dinero){
+                this.saldo = this.saldo + dinero;
+            }
+            extraer(dinero){
+                this.saldo = this.saldo - dinero;
+            }
+        }
+        const cliente1 = new Cliente('Etzael', 1900);
+        document.write('Nombre del cliente: ' + cliente1.nombre + '<br>');
+        document.write('Saldo actual: ' + cliente1.saldo + '<br>');
+        cliente1.depositar(300);
+        document.write('Saldo luego de depositar 300: ' + cliente1.saldo + '<br>');
+        cliente1.extraer(100);
+        document.write('Saldo despues de extraer $100: '+ cliente1.saldo + '<br>');
+
+        const cliente2 = new Cliente('Vianey', 100);
+        document.write('Nombre del cliente: ' + cliente2.nombre + '<br>');
+        document.write('Saldo actual: ' + cliente2.saldo + '<br>');
+        cliente2.depositar(3000);
+        document.write('Saldo luego de depositar 3000: ' + cliente2.saldo + '<br>');
+        cliente2.extraer(100);
+        document.write('Saldo despues de extraer $100: '+ cliente2.saldo + '<br>');
+    </script>
+</body>
+</html>
