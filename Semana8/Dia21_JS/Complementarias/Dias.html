@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias laborables</title>
+</head>
+<body>
+    <script>
+        let dia = prompt("Ingresa un día de la semana: ");
+        dia1 = dia.toLocaleUpperCase();
+        if(dia1=="LUNES" || dia1=="MARTES" || dia1=="MIERCOLES" || dia1=="JUEVES" || dia1=="VIERNES"){
+            document.write("El día " + dia + " es laborable.");
+        }else if(dia1=="SABADO" || dia1=="DOMINGO"){
+            document.write("El día " + dia + " es no laborable");
+        }
+    </script>
+</body>
+</html>
