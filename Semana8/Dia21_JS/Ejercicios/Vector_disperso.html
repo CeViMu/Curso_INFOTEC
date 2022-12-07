@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo vector disperso</title>
+</head>
+<body>
+    <script>
+       let cantidad=0;
+       let almacen=[];
+       do{
+        let premio = parseInt(Math.random()*1000);
+        almacen[premio]=1000*(cantidad+1);
+        cantidad++;
+       } while(cantidad != 11);
+       for(let i=0; i<almacen.length; i++){
+        if(almacen[i] != undefined){
+             document.write('La caja '+ i + ' tiene un premio de ' + almacen[i] + '<br>');
+        }
+       }
+    </script>
+</body>
+</html>
