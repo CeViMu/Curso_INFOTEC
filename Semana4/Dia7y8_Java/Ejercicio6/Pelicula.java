@@ -2,7 +2,7 @@ package Semana4.Dia7y8_Java.Ejercicio6;
 
 public class Pelicula {
     private String titulo;
-    private float duracion = 2;
+    static private float duracion;
     private Boolean status = false;
     private String genero;
     private String director;
@@ -11,7 +11,7 @@ public class Pelicula {
         this.titulo = titulo;
         this.duracion = duracion;
         this.genero = genero;
-        this.director = director;
+        this.director = director; 
     }
 
     public Pelicula(String titulo, String director) {
@@ -37,7 +37,7 @@ public class Pelicula {
     public float getDuracion() {
         return duracion;
     }
-    public void setNombre(float duracion) {
+    public void setDuracion(float duracion) {
         this.duracion = duracion;
     }
 
