@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Administración de articulos</h1>
+
+    <div>
+        
+        <div>
+            <div>
+                <table border="2">
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Descripcion</th>
+                            <th>Precio</th>
+                            <th>Eliminar</th>
+                            <th>Editar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaA"></tbody>
+                </table>
+            </div>
+        </div><br><br>
+
+        <div>
+            <form action="#" id="formulario">
+                <label for="">Código</label>
+                <input type="number" name="codigo" id="codigo"><br>
+                <label for="">Descripción</label>
+                <input type="text" name="descripcion" id="descripcion"><br>
+                <label for="">Precio</label>
+                <input type="number" name="precio" id="precio"><br>
+                <input type="submit" id="bAgregar" value="Agregar">
+                <input type="submit" id="bEditar" value="Editar">
+            </form><br>
+        </div>
+
+        
+    </div>
+
+    <script>
+        class Articulo{
+            constructor(codigo, descripcion, precio){
+                this.codigo = codigo;
+                this.descripcion = descripcion;
+                this.precio = precio;
+            }
+            getCodigo(){
+                return this.codigo;
+            }
+            getDescripción(){
+                return this.descripcion;
+            }
+            getPrecio(){
+                return this.precio;
+            }
+            setCodigo(codigo){
+                this.codigo = codigo;
+            }
+            setCodigo(descripcion){
+                this.descripcion = descripcion;
+            }
+            setCodigo(precio){
+                this.precio = precio;
+            }
+        }
+
+        let articulos = [];
+        let codigo = document.getElementById("codigo");
+        let descripcion = document.getElementById("descripcion");
+        let precio = document.getElementById("precio");
+        let bAgregar = document.getElementById("bAgregar");
+        let bEditar = document.getElementById("bEditar");
+
+
+        bAgregar.addEventListener("click", function(e){
+            indicador= true;
+            e.preventDefault();
+            if(codigo.value == ""){
+                alert("El codigo no puede estar vacio, ingresa un código");
+            }else if(codigo.value == 0){
+                alert("El codigo no puede ser cero, ingresa uno nuevo");
+            }
+            else{
+                for(let i=0; i<articulos.length; i++){
+                    if(articulos[i].getCodigo()== codigo.value){
+                        alert("Ya existe el código ingresado, ingresa uno nuevo");
+                        indicador= false;
+                        return;
+                    }
+                }
+                if(indicador){
+                    agregar();
+                }else{
+                    return;
+                }
+            }
+        })
+
+        bEditar.addEventListener("click", function(e){
+                    e.preventDefault();
+                    for(let i=0; i<articulos.length; i++){
+                        if(articulos[i].getCodigo == codigo.value){
+                            articulos[i].setDescripcion(descripcion.value);
+                            articulos[i].setPrecio(precio.value);
+                            mostrar();
+                            vaciar();
+                        }
+                    }
+        })
+
+        function agregar(){
+            let ArticuloPrueba = new Articulo(codigo.value, descripcion.value, precio.value);
+            articulos.push(ArticuloPrueba);
+            vaciar();
+            mostrar();
+        }
+
+        function vaciar(){
+            codigo.value= "";
+            descripcion.value = "";
+            precio.value = "";
+        }
+
+        function mostrar(){
+            let tabla = document.getElementById("tablaA");
+            tabla.innerHTML = "";
+            for(let i=0; i<articulos.length; i++){
+                tabla.innerHTML += `<tr><td>${articulos[i].getCodigo()}</td>
+                    <td>${articulos[i].getDescripción()}</td>
+                    <td>${articulos[i].getPrecio()}</td>
+                    <td><button class="btn btn-danger" onclick="eliminar(${i})">Eliminar</button></td>
+                    <td><button class="btn btn-warning" onclick="editar(${i})">Editar</button></td></tr>`
+            }
+        }
+
+        function eliminar(i){
+            var resultado = window.confirm('¿Estas seguro de eliminar el registro?');
+            if(resultado === true){
+                window.alert('El artículo fue eliminado');
+                articulos.splice(i,1);
+                mostrar();
+            } 
+        }
+
+        function editar(i){
+            descripcion.value = articulos[i].getDescripción();
+            precio.value = articulos[i].getPrecio();
+            codigo.value = articulos[i].getCodigo();
+        }
+
+        
+    </script>
+</body>
+</html>
