@@ -17,16 +17,46 @@
                 <li><a href="#">Sobre mi</a></li>
                 <li><a href="#">Mis publicaciones</a></li>
                 <li><a href="#">Recursos adicionales</a></li>
-                <li><a href="#">Registrate</a></li>
+                <li><a href="#registrate">Registrate</a></li>
             </ul>
         </div>
-    </header>
+    </header><br><br>
+
+    <dialog open id="registrate" >
+        <h2 class="reg" style="text-align: center;">Registrate</h2><br>
+        <p>Si ya tienes una cuenta da click <a href="#">aqui</a></p><br>
+        <label>Nombre</label>
+        <input type="text" size="30"><br><br>
+        <label>Apellido</label>
+        <input type="text" size="30"><br><br>
+        <label>Fecha de nacimiento</label>
+        <input type="date"><br><br>
+        <label>Sexo</label><br>
+        <input type="radio">Hombre<br><br>
+        <input type="radio">Mujer<br><br>
+        <input type="radio">Otro<br><br>
+        <label>Correo electrónico</label>
+        <input type="email" size="30"><br><br>
+        <label>Contraseña</label>
+        <input type="password" size="30"><br><br>
+        <button type="submit">Crear</button><br>
+        <button id="btn-cerrar-modal">Cerrar</button>
+    </dialog>
     
     <script>
+        const header = document.getElementById('header');
         const toggle = document.getElementById('toggle');
         const navbar = document.getElementById('navbar');
-        toogle.onclick = function(){
-            toogle.classList.toggle('active');
+
+        document.onclick = function(e){
+            if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
+                toggle.classList.remove('active');
+                navbar.classList.remove('active');
+            }
+        }
+
+        toggle.onclick = function(){
+            toggle.classList.toggle('active');
             navbar.classList.toggle('active');
         }
     </script>
