@@ -16,13 +16,18 @@
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Sobre mi</a></li>
                 <li><a href="#">Mis publicaciones</a></li>
-                <li><a href="otra_pagina.php?modal=true">Recursos adicionales</a></li>
-                <li><a href="#registrate" id ="btn-abrir-modal">Registrate</a></li>
+                <li><a href="#">Recursos adicionales</a></li>
+                
             </ul>
         </div>
     </header><br><br>
 
-    <dialog id="registrate" >
+    <div id="open">
+         <button id="btn-abrir-modal">Registrate</button>
+    </div><br>
+   
+    <dialog id="modal">
+
         <h2 class="reg" style="text-align: center;">Registrate</h2><br>
         <p>Si ya tienes una cuenta da click <a href="#">aqui</a></p><br>
         <label>Nombre</label>
@@ -59,6 +64,36 @@
             toggle.classList.toggle('active');
             navbar.classList.toggle('active');
         }
+
+   
+            (() => {
+              const updateButton = document.getElementById("btn-abrir-modal");
+              const cancelButton = document.getElementById("btn-cerrar-modal");
+              const dialog = document.getElementById("modal");
+              //dialog.returnValue = "favAnimal";
+          
+              function openCheck(modal) {
+                if (modal.open) {
+                  console.log("Dialog open");
+                } else {
+                  console.log("Dialog closed");
+                }
+              }
+          
+              // Update button opens a modal dialog
+              updateButton.addEventListener("click", () => {
+                modal.showModal();
+                openCheck(modal);
+              });
+          
+              // Form cancel button closes the dialog box
+              cancelButton.addEventListener("click", () => {
+                modal.close("animalNotChosen");
+                openCheck(modal);
+              });
+            });
+         
+          
     </script>
 
 </body>

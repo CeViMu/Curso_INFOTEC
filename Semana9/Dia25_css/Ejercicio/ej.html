@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Ejemplo Simple Page</title>
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Blog CeVi</a>
+        <div id="toggle"></div>
+        <div id="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Mis publicaciones</a></li>
+                <li><a href="#">Recursos adicionales</a></li>
+                
+            </ul>
+        </div>
+    </header><br><br>
+
+    <dialog id="favDialog">
+        <form method="dialog">
+            <h2 class="reg" style="text-align: center;">Registrate</h2><br>
+            <p>Si ya tienes una cuenta da click <a href="#">aqui</a></p><br>
+            <label>Nombre</label>
+            <input type="text" size="30"><br><br>s
+            <label>Apellido</label>
+            <input type="text" size="30"><br><br>
+            <label>Fecha de nacimiento</label>
+            <input type="date"><br><br>
+            <label>Sexo</label><br>
+            <input type="radio">Hombre<br><br>
+            <input type="radio">Mujer<br><br>
+            <input type="radio">Otro<br><br>
+            <label>Correo electrónico</label>
+            <input type="email" size="30"><br><br>
+            <label>Contraseña</label>
+            <input type="password" size="30"><br><br>
+            <button type="submit">Crear</button><br>
+            <button id="btn-cerrar-modal">Cerrar</button>
+        </form>
+    </dialog>
+  
+  <div id="open">
+    <button id="updateDetails">Registrate</button>
+  </div>
+  
+  <script>
+    const header = document.getElementById('header');
+    const toggle = document.getElementById('toggle');
+    const navbar = document.getElementById('navbar');
+
+    document.onclick = function(e){
+        if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
+            toggle.classList.remove('active');
+            navbar.classList.remove('active');
+        }
+    }
+
+    toggle.onclick = function(){
+        toggle.classList.toggle('active');
+        navbar.classList.toggle('active');
+    }
+  </script>
+
+
+  <script> 
+
+
+    (() => {
+      const updateButton = document.getElementById("updateDetails");
+      const cancelButton = document.getElementById("cancel");
+      const dialog = document.getElementById("favDialog");
+      dialog.returnValue = "favAnimal";
+  
+      function openCheck(dialog) {
+        if (dialog.open) {
+          console.log("Dialog open");
+        } else {
+          console.log("Dialog closed");
+        }
+      }
+  
+      // Update button opens a modal dialog
+      updateButton.addEventListener("click", () => {
+        dialog.showModal();
+        openCheck(dialog);
+      });
+  
+      // Form cancel button closes the dialog box
+      cancelButton.addEventListener("click", () => {
+        dialog.close("animalNotChosen");
+        openCheck(dialog);
+      });
+    })();
+  </script>
+  
+</body>
+</html>
